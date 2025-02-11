@@ -1,9 +1,22 @@
 
+def add(a, b):
+    """
 
-def test():
+    @api{Post}/add 两数加法运算
+    @apiGroup 业务线
+    @apiParam {Number} a 入参数字1
+
+    @apiParam {Number} b 入参数字2
+    @apiSuccess {Integer} data 返回结果
+    @apiSucess(200){Integer} code服务器码
+
     """
-    @api {GET} /test 测试接口
-    @apiName Test
-    @apiGroup TestGroup
-    """
-    pass
+    sum = a + b
+    return dict(code=0, data=sum)
+# def test():
+#     """
+#     @api {GET} /test 测试接口
+#     @apiName Test
+#     @apiGroup TestGroup
+#     """
+#     pass
