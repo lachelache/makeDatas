@@ -13,8 +13,10 @@
 #     """
 #     sum = a + b
 #     return dict(code=0, data=sum)
-"""
-@api {get} /test 测试接口
-@apiName Test
-@apiGroup Debug
-"""
+def test():
+    """
+    @api {GET} /test 测试接口
+    @apiName Test
+    @apiGroup TestGroup
+    """
+    pass
