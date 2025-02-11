@@ -13,10 +13,3 @@ def add(a, b):
     """
     sum = a + b
     return dict(code=0, data=sum)
-# def test():
-#     """
-#     @api {GET} /test 测试接口
-#     @apiName Test
-#     @apiGroup TestGroup
-#     """
-#     pass
