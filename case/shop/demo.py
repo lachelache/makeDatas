@@ -1,7 +1,6 @@
 
 def add(a, b):
     """
-
     @api {post} /add 两数加法运算
     @apiGroup 业务线
     @apiName add
@@ -17,7 +16,6 @@ def add(a, b):
         "msg":"请求成功",
         "data": 12
     }
-
     """
     sum = a + b
     return dict(code=0, data=sum, msg='ok')
