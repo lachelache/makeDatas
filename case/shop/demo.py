@@ -8,6 +8,11 @@ def add(a, b):
     @apiPermission zs
     @apiParam {Number} a 入参数字1
     @apiParam {Number} b 入参数字2
+    @apiParamExample {json} 请求示例：
+    {
+        "a": 1,
+        "b": 11
+    }
     @apiSuccess (200) {String} data 返回结果
     @apiSucess (200) {Integer} code服务器码
     @apiSuccessExample {json} 返回示例：
