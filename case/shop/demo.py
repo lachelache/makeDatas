@@ -1,7 +1,7 @@
 
 def add(a, b):
     """
-    @api {post} /add /:a /:b 两数加法运算
+    @api {post} /add 两数加法运算
     @apiGroup 业务线
     @apiName add
     @apiDescription 执行两数求和，返回计算结果
