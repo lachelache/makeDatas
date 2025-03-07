@@ -14,7 +14,7 @@ def add(a, b):
         "b": 11
     }
     @apiSuccess (200) {String} data 返回结果
-    @apiSucess (200) {Integer} code服务器码
+    @apiSuccess (200) {Integer} code服务器码
     @apiSuccessExample {json} 返回示例：
     {
         "code": 0,
