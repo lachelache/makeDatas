@@ -1,27 +1,33 @@
+from faker import Factory
+from common.fun_response import CaseResponse
+from common.fun_exception import except_script_error
+from datetime import datetime
 
+@except_script_error
 def add(a, b):
     """
-    @api {post} /add 两数加法运算
-    @apiGroup 业务线
+    @api {post} /add 两数相加
+    @apiGroup 商城
     @apiName add
-    @apiTtile 两数加法运算
-    @apiDescription 执行两数求和，返回计算结果
-    @apiPermission zs
-    @apiParam {Number} a 入参数字1
-    @apiParam {Number} b 入参数字2
-    @apiParamExample {json} 请求示例：
+    @apiDescription  请求参数只是demo，实际只接收a,b，执行两数求和，返回计算结果
+    @apiPermission fang
+    @apiParam {String=7777,9999} a=77777    数字类型
+    @apiParam {String=6666,7777} b=9999   数字类型
+    @apiParamExample {json} 请求示例:
     {
-        "a": 1,
-        "b": 11
-    }
-    @apiSuccess (200) {String} data 返回结果
-    @apiSuccess (200) {Integer} code服务器码
-    @apiSuccessExample {json} 返回示例：
+         "a": "111",
+         "b": "9999"
+      }
+    @apiSuccess (200) {Number} code=200 服务器码
+    @apiSuccess (200) {String} data="4" 造数成功返回相关的数据
+    @apiSuccess (200) {String} msg="造数成功" 提示语
+    @apiSuccessExample {json} 返回示例:
     {
         "code": 0,
-        "msg":"请求成功",
+        "msg": "请求成功",
         "data": 12
     }
     """
-    sum = a + b
-    return dict(code=0, data=sum, msg='ok')
+    sum = int(a) + int(b)
+    return CaseResponse.success(data= sum)
+
