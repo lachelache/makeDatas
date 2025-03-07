@@ -4,6 +4,7 @@ def add(a, b):
     @api {post} /add 两数加法运算
     @apiGroup 业务线
     @apiName add
+    @apiTtile 两数加法运算
     @apiDescription 执行两数求和，返回计算结果
     @apiPermission zs
     @apiParam {Number} a 入参数字1
