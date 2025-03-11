@@ -1,6 +1,6 @@
-# from faker import Factory
-# from common.fun_response import CaseResponse
-# from common.fun_exception import except_script_error
+from faker import Factory
+from common.fun_response import CaseResponse
+from common.fun_exception import except_script_error
 from datetime import datetime
 
 @except_script_error
