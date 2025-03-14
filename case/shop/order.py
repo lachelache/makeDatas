@@ -89,12 +89,12 @@ def createOrder(logisticId: str, orderInfoForms: list, submitType: str = '1'):
         }
         """
     res = {
-                "logisticId": "888666",
-                "submitType": "1",
+                "logisticId": "",
+                "submitType": "",
                 "orderInfoForms": [
                     {
-                        "skuId": "1314520",
-                        "num": "1"
+                        "skuId": "",
+                        "num": ""
                     }
                 ]
             }
