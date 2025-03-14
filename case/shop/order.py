@@ -54,7 +54,7 @@ def D4createOrder(distributorCode: str, productList: list, account: str = 'sysad
 """
     return CaseResponse.success(data=res), demo_log
 
-def createOrder(logisticId: str, orderInfoForms: list, account: submitType = '1'):
+def createOrder(logisticId: str, orderInfoForms: list, submitType: str = '1'):
     """
         @api {post} /createOrder 创建商城订单
         @apiGroup 商城
