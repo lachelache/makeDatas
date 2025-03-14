@@ -53,3 +53,40 @@ def D4createOrder(distributorCode: str, productList: list, account: str = 'sysad
 [{now_time}]: 脚本结束 -> 进行一键创建订单数据
 """
     return CaseResponse.success(data=res), demo_log
+
+def createOrder(logisticId: str, orderInfoForms: list, account: submitType = '1'):
+    """
+        @api {post} /createOrder 创建商城订单
+        @apiGroup 商城
+        @apiName createOrder
+        @apiDescription  创建商城订单
+        @apiPermission zs
+        @apiParam {String} logisticId 地址id
+        @apiParam {String} submitType 订单类型
+        @apiParam {Object[]} orderInfoForms 订单信息数组
+        @apiParam {String} orderInfoForms.skuId 产品编码
+        @apiParam {String} orderInfoForms.num 购买数量
+        @apiParamExample {json} 请求示例:
+        {
+                "logisticId": "888666",
+                "submitType": "1",
+                "orderInfoForms": [
+                    {
+                        "skuId": "1314520",
+                        "num": "1"
+                    }
+                ]
+            }
+        @apiSuccess (200) {Integer} responseCode 服务器码
+        @apiSuccess (200) {String} responseMsg 提示语
+        @apiSuccess (200) {Object} responseData 造数成功返回相关的数据
+        @apiSuccessExample {json} 返回示例:
+        {
+            "responseCode": 0,
+            "responseMsg": "请求成功",
+            "responseData": {
+            }
+        }
+        """
+    res = productList
+    now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
