@@ -1,7 +1,8 @@
-from faker import Factory
+from faker import Faker
 from common.fun_response import CaseResponse
 from common.fun_exception import except_script_error
 from datetime import datetime
+
 
 
 def D4createOrder(distributorCode: str, productList: list, account: str = 'sysadmin'):
