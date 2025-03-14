@@ -88,5 +88,5 @@ def createOrder(logisticId: str, orderInfoForms: list, submitType: str = '1'):
             }
         }
         """
-    res = productList
+
     now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
