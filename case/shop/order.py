@@ -88,7 +88,16 @@ def createOrder(logisticId: str, orderInfoForms: list, submitType: str = '1'):
             }
         }
         """
-    res = orderInfoForms
+    res = {
+                "logisticId": "888666",
+                "submitType": "1",
+                "orderInfoForms": [
+                    {
+                        "skuId": "1314520",
+                        "num": "1"
+                    }
+                ]
+            }
 
     now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     return CaseResponse.success(data=res), now_time
